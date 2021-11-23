@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./frost.png" type="image/png">
+    <title><frost>pageTitle</frost></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #232323;
+            color: #FFFFFF;
+            margin-top: 8rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        img {
+            height: 15rem;
+            width: 15rem;
+            border-radius: 50%;
+            user-select: none;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            padding: 1rem;
+            cursor: pointer;
+            border: none;
+            background-color: #00a5a5;
+            color: white;
+            border-radius: 0.3rem;
+            width: 10%;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #008080;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img draggable="false" src="./frost.png" alt="icon">
+        #include "./components/description.md"
+    </main>
+    <div class="buttons">
+        <a href="https://frost.js.org" target="_blank">Documentation</a>
+        <a href="https://github.com/DevSnowflake/frost" target="_blank">GitHub</a>
+    </div>
+
+    <frost typescript>
+        const titleElm = document.querySelector("h1");
+        
+        if (titleElm) {
+            const colorGen = (): string => {
+                return `#${(Math.floor(Math.random() * 0xFFFFFF) + 1).toString(16)}`;
+            };
+            
+            setInterval(() => {
+                titleElm.style.color = colorGen();
+            }, 2e3);
+        }
+    </frost>
+</body>
+</html>

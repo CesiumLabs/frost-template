@@ -1,0 +1,23 @@
+{
+  "name": "frostjs-template",
+  "version": "0.1.0",
+  "description": "Frost starter template.",
+  "private": true,
+  "scripts": {
+    "build": "frost --build",
+    "dev": "frost --serve --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevSnowflake/frost-template.git"
+  },
+  "author": "DevSnowflake",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/DevSnowflake/frost-template/issues"
+  },
+  "homepage": "https://github.com/DevSnowflake/frost-template#readme",
+  "devDependencies": {
+    "frost-gen": "^0.1.0-b"
+  }
+}

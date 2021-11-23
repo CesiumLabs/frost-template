@@ -1,0 +1,6 @@
+{
+    "srcDir": "src",
+    "buildDir": "build",
+    "staticDir": "public",
+    "HTMLcompressionLevel": 3
+}
